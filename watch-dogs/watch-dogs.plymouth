@@ -1,0 +1,9 @@
+[Plymouth Theme]
+Name=watch-dogs
+Description=Watch-Dogs modified Plymouth theme from 1BB3
+Comment= By K. Harishankar (harishnkr)
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/watch-dogs
+ScriptFile=/usr/share/plymouth/themes/watch-dogs/watch-dogs.script
