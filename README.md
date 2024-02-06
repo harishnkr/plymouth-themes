@@ -19,5 +19,4 @@ sudo plymouth-set-default-theme -l <theme name>
 
 ```
 sudo plymouth-set-default-theme -R <theme name>
-
 ```
