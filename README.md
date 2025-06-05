@@ -21,14 +21,19 @@ sudo cp -r <theme name> /usr/share/plymouth/themes
 ```
 sudo plymouth-set-default-theme -l <theme name>
 ```
+
++ Configure the system to run Plymouth
+
+In `/etc/default/grub` add parameters `quiet` as well as `splash`
+In `/etc/mkinitcpio` add `plymouth` right after `base udev` in HOOKS=() and the video card driver in `MODULES=()`.
+For example, for Intel cards, add `MODULES=(i915)`
+
+  
 + Set the theme 
 
 ```
 sudo plymouth-set-default-theme -R <theme name>
 ```
-Now in `/etc/default/grub` add parameters `quiet` as well as `splash`
-In `/etc/mkinitcpio` add `plymouth` right after `base udev` in HOOKS=() and the video card driver in `MODULES=()`.
-For example, for Intel cards, add `MODULES=(i915)`
 
 ## Credits
 https://github.com/1BB3/watch-dogs/tree/master
