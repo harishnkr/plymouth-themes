@@ -1,6 +1,12 @@
 # plymouth-themes
-some themes that I modified for personal use
+Plymouth themes that I modified for personal use
 
+## Requirements
+
+Download the following packages
+```
+plymouth
+```
 
 ## Setup
 
@@ -20,3 +26,5 @@ sudo plymouth-set-default-theme -l <theme name>
 ```
 sudo plymouth-set-default-theme -R <theme name>
 ```
+## Credits
+https://github.com/1BB3/watch-dogs/tree/master
