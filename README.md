@@ -7,6 +7,23 @@ Download the following packages
 ```
 plymouth
 ```
+After installing the package, do the following:
+
+- In `/etc/default/grub` add parameters `quiet` as well as `splash`
+
+- In `/etc/mkinitcpio` add `plymouth` right after `base udev` in HOOKS=() and the video card driver in `MODULES=()`.
+
++ Configure the system to run Plymouth
+
+For example, for Intel cards, add `MODULES=(i915)`
+
+Run :
+
+```
+sudo mkinitcpio -P
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+or the related commands
 
 ## Setup
 
@@ -19,16 +36,9 @@ sudo cp -r <theme name> /usr/share/plymouth/themes
 + (Optional) Check if the theme is copied correctly
 
 ```
-sudo plymouth-set-default-theme -l <theme name>
+sudo plymouth-set-default-theme -l
 ```
 
-+ Configure the system to run Plymouth
-
-In `/etc/default/grub` add parameters `quiet` as well as `splash`
-In `/etc/mkinitcpio` add `plymouth` right after `base udev` in HOOKS=() and the video card driver in `MODULES=()`.
-For example, for Intel cards, add `MODULES=(i915)`
-
-  
 + Set the theme 
 
 ```
