@@ -11,7 +11,7 @@ After installing the package, do the following:
 
 - In `/etc/default/grub` add parameters `quiet` as well as `splash`
 
-+ (optional, if it is not running)
+(optional, if it is not running) :
 
 - In `/etc/mkinitcpio` add `plymouth` right after `base udev` in HOOKS=() and the video card driver in `MODULES=()`.
 
@@ -25,7 +25,7 @@ Run :
 sudo mkinitcpio -P
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
-or the related commands
+or the related commands according to the system
 
 ## Setup
 
